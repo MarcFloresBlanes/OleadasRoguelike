@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 1759662638}
   - component: {fileID: 1759662637}
   - component: {fileID: 1759662642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mage-Cyan_0
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 2008492556}
   - component: {fileID: 2008492555}
   - component: {fileID: 2008492560}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: D_Walk_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
