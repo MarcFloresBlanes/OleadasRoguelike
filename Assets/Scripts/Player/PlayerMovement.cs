@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;  // velocidad ajustable desde el Inspector
 
