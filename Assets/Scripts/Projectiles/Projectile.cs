@@ -9,9 +9,13 @@ public class Projectile : MonoBehaviour
     private Vector2 direction;
     private Rigidbody2D rb;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Start()
+    {
         rb.linearVelocity = direction * speed;
         Destroy(gameObject, lifetime);
     }
