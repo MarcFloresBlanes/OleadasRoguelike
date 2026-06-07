@@ -38,8 +38,11 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Game Over");
-        // Por ahora solo un log, luego añadiremos la pantalla de Game Over
+        GameOverManager gameOverManager = FindAnyObjectByType<GameOverManager>();
+        if (gameOverManager != null)
+        {
+            gameOverManager.ShowGameOver();
+        }
         gameObject.SetActive(false);
     }
 
