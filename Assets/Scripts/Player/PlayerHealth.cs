@@ -42,4 +42,7 @@ public class PlayerHealth : MonoBehaviour
         // Por ahora solo un log, luego añadiremos la pantalla de Game Over
         gameObject.SetActive(false);
     }
+
+    public int GetCurrentHealth() => currentHealth;
+    public int GetMaxHealth() => maxHealth;
 }
