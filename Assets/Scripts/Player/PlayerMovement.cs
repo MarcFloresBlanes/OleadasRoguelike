@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;  // velocidad ajustable desde el Inspector
+    [SerializeField] private float speed;
+    [SerializeField] private ClaseSO clase;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -10,6 +11,13 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        speed = clase != null ? clase.velocidadBase : 5f;
+
+        // Aplicar sprite de la clase
+        if (clase != null && clase.spritePersonaje != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = clase.spritePersonaje;
+        }
     }
 
     // Update is called once per frame

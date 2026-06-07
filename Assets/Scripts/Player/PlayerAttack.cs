@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [SerializeField] private ClaseSO clase;
     [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private float attackCooldown = 0.4f;
     [SerializeField] private float projectileOffset = 0.5f;
 
+    private float attackCooldown;
     private float lastAttackTime = 0f;
+
+    private void Start()
+    {
+        attackCooldown = clase != null ? clase.cooldownAtaque : 0.4f;
+    }
 
     void Update()
     {
@@ -33,6 +39,7 @@ public class PlayerAttack : MonoBehaviour
         if (projectile != null)
         {
             projectile.SetDirection(direction);
+            projectile.SetDamage(clase != null ? clase.dañoBase : 10);
         }
     }
 }

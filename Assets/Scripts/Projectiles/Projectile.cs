@@ -24,6 +24,10 @@ public class Projectile : MonoBehaviour
     {
         direction = dir.normalized;
     }
+    public void SetDamage(int newDamage)
+    {
+        damage = newDamage;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

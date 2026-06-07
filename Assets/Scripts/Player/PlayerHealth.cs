@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private ClaseSO clase;
     [SerializeField] private float invincibilityDuration = 0.5f;
 
+    private int maxHealth;
     private int currentHealth;
     private bool isInvincible = false;
 
     void Start()
     {
+        maxHealth = clase != null ? clase.vidaBase : 100;
         currentHealth = maxHealth;
     }
 
@@ -18,7 +20,6 @@ public class PlayerHealth : MonoBehaviour
         if (isInvincible) return;
 
         currentHealth -= damage;
-        Debug.Log("Vida restante: " + currentHealth);
 
         if (currentHealth <= 0)
         {
