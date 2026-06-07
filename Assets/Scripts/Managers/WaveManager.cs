@@ -6,7 +6,6 @@ public class WaveManager : MonoBehaviour
     [Header("Configuración de oleadas")]
     [SerializeField] private float waveDuration = 30f;
     [SerializeField] private float timeBetweenSpawns = 2f;
-    [SerializeField] private int baseEnemyCount = 5;
 
     [Header("Referencias")]
     [SerializeField] private EnemySpawner enemySpawner;
